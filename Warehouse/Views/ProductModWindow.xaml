@@ -1,0 +1,59 @@
+﻿<Window x:Class="Warehouse.Views.ProductModWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Товар" Height="500" Width="420"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Артикул:" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="TxtArticle" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Наименование:" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="TxtName" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Единица:" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="TxtUnit" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Цена:" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="TxtPrice" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Остаток:" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="TxtStock" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Скидка %:" VerticalAlignment="Center" Margin="0,5"/>
+        <TextBox x:Name="TxtDiscount" Grid.Row="5" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Категория:" VerticalAlignment="Center" Margin="0,5"/>
+        <ComboBox x:Name="CmbCategory" Grid.Row="6" Grid.Column="1" Margin="5" DisplayMemberPath="Name"/>
+
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="Производитель:" VerticalAlignment="Center" Margin="0,5"/>
+        <ComboBox x:Name="CmbManufacturer" Grid.Row="7" Grid.Column="1" Margin="5" DisplayMemberPath="Name"/>
+
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="Поставщик:" VerticalAlignment="Center" Margin="0,5"/>
+        <ComboBox x:Name="CmbSupplier" Grid.Row="8" Grid.Column="1" Margin="5" DisplayMemberPath="Name"/>
+
+        <StackPanel Grid.Row="10" Grid.ColumnSpan="2" Orientation="Horizontal" 
+                    HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="OK" Width="80" Margin="5" Click="Ok_Click"/>
+            <Button Content="Отмена" Width="80" Margin="5" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
