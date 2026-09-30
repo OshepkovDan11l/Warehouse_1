@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse", "Warehouse\Ware
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseData", "WarehouseData\WarehouseData.csproj", "{63AD9666-B48A-476D-8172-1258262793BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WareHouseDataTests", "WareHouseDataTest\WareHouseDataTests.csproj", "{C27AF793-9B86-4A40-82F2-26ACC07A49B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseData.Tests", "WareHouseDataTest\WarehouseData.Tests.csproj", "{C27AF793-9B86-4A40-82F2-26ACC07A49B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

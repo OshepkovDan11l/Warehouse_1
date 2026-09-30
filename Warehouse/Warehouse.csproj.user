@@ -5,28 +5,28 @@
     <Compile Update="MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\DictionaryItemWindow.xaml.cs">
+    <Compile Update="Windows\DictionaryItemWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\DictionaryWindow.xaml.cs">
+    <Compile Update="Windows\DictionaryWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\InvoiceCreateWindow.xaml.cs">
+    <Compile Update="Windows\InvoiceCreateWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\InvoiceItemWindow.xaml.cs">
+    <Compile Update="Windows\InvoiceItemWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\InvoiceWindow.xaml.cs">
+    <Compile Update="Windows\InvoiceWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\OrgsView.xaml.cs">
+    <Compile Update="Windows\OrgsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\ProductModWindow.xaml.cs">
+    <Compile Update="Windows\ProductModWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\WhModWindow.xaml.cs">
+    <Compile Update="Windows\WhModWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

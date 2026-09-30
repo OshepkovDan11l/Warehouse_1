@@ -3,11 +3,11 @@ using WarehouseData.Models;
 
 namespace WarehouseData.Services
 {
-    public class ServiceOrgs
+    public class OrganizationService
     {
         private ApplicationContext _context;
 
-        public ServiceOrgs(ApplicationContext context)
+        public OrganizationService(ApplicationContext context)
         {
             _context = context;
         }

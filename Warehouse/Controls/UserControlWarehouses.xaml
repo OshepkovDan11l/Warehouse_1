@@ -59,7 +59,7 @@
 
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
                     <TextBlock Text="Поиск:" VerticalAlignment="Center" Margin="0 5 5 0"/>
-                    <TextBox x:Name="TxtSearch" Width="250"
+                    <TextBox x:Name="TxtSearch" Width="200"
                              TextChanged="TxtSearch_TextChanged" Margin="0 5 10 0"/>
                     <TextBlock Text="Поставщик:" VerticalAlignment="Center" Margin="0 5 5 0"/>
                     <ComboBox x:Name="CmbSupplier" Width="150"
@@ -78,7 +78,7 @@
                 <DataGrid x:Name="DgProducts" AutoGenerateColumns="False"
                           IsReadOnly="True" SelectionMode="Single"
                           Grid.Row="1" MouseDoubleClick="DgProducts_MouseDoubleClick"
-                          ItemsSource="{Binding}">
+                          ItemsSource="{Binding}" SelectionChanged="DgProducts_SelectionChanged">
                     <DataGrid.RowStyle>
                         <Style TargetType="DataGridRow">
                             <Setter Property="Background"

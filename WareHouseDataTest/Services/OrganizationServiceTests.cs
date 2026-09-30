@@ -11,22 +11,22 @@ using WarehouseData.Models;
 namespace WareHouseDataTest.Services
 {
     [TestClass]
-    public class ServiceOrgsTests
+    public class OrganizationServiceTests
     {
         [TestMethod]
         public void ServiceOrgsTest()
         {
             ApplicationContext context = new ApplicationContext();
-            ServiceOrgs svc = new ServiceOrgs(context);
+            OrganizationService svc = new OrganizationService(context);
             Assert.IsNotNull(svc);
-            Assert.IsInstanceOfType(svc, typeof(ServiceOrgs));
+            Assert.IsInstanceOfType(svc, typeof(OrganizationService));
         }
 
         [TestMethod]
         public void AddOrgTest()
         {
             ApplicationContext context = new ApplicationContext();
-            ServiceOrgs svc = new ServiceOrgs(context);
+            OrganizationService svc = new OrganizationService(context);
             Organization org = new Organization("Всякая всячина, ООО");
             Assert.IsNotNull(org);
             Assert.IsTrue(svc.AddOrg(org));
@@ -37,7 +37,7 @@ namespace WareHouseDataTest.Services
         public void AddOrg_Null_ReturnsFalse()
         {
             ApplicationContext context = new ApplicationContext();
-            ServiceOrgs svc = new ServiceOrgs(context);
+            OrganizationService svc = new OrganizationService(context);
             Assert.IsFalse(svc.AddOrg(null!));
         }
 
@@ -45,7 +45,7 @@ namespace WareHouseDataTest.Services
         public void AddOrg_EmptyName_ReturnsFalse()
         {
             ApplicationContext context = new ApplicationContext();
-            ServiceOrgs svc = new ServiceOrgs(context);
+            OrganizationService svc = new OrganizationService(context);
             Organization org = new Organization(" ");
             Assert.IsFalse(svc.AddOrg(org));
         }
@@ -54,7 +54,7 @@ namespace WareHouseDataTest.Services
         public void EditOrgTest()
         {
             ApplicationContext context = new ApplicationContext();
-            ServiceOrgs svc = new ServiceOrgs(context);
+            OrganizationService svc = new OrganizationService(context);
             Organization org = new Organization("Всякая всячина, ООО");
             svc.AddOrg(org);
             Organization? org1 = svc.GetContext()
@@ -68,7 +68,7 @@ namespace WareHouseDataTest.Services
         public void EditOrg_Null_ReturnsFalse()
         {
             ApplicationContext context = new ApplicationContext();
-            ServiceOrgs svc = new ServiceOrgs(context);
+            OrganizationService svc = new OrganizationService(context);
             Assert.IsFalse(svc.EditOrg(null!));
         }
 
@@ -76,7 +76,7 @@ namespace WareHouseDataTest.Services
         public void EditOrg_NotFound_ReturnsFalse()
         {
             ApplicationContext context = new ApplicationContext();
-            ServiceOrgs svc = new ServiceOrgs(context);
+            OrganizationService svc = new OrganizationService(context);
             Organization org = new Organization("Несуществующая");
             Assert.IsFalse(svc.EditOrg(org));
         }
@@ -85,7 +85,7 @@ namespace WareHouseDataTest.Services
         public void DelOrgTest()
         {
             ApplicationContext context = new ApplicationContext();
-            ServiceOrgs svc = new ServiceOrgs(context);
+            OrganizationService svc = new OrganizationService(context);
             Organization org = new Organization("Всякая всячина, ООО");
             svc.AddOrg(org);
             Organization org1 = svc.GetContext().orgs.First();
@@ -98,7 +98,7 @@ namespace WareHouseDataTest.Services
         public void DelOrg_Null_ReturnsFalse()
         {
             ApplicationContext context = new ApplicationContext();
-            ServiceOrgs svc = new ServiceOrgs(context);
+            OrganizationService svc = new OrganizationService(context);
             Assert.IsFalse(svc.DelOrg(null!));
         }
 
@@ -106,7 +106,7 @@ namespace WareHouseDataTest.Services
         public void GetContextTest()
         {
             ApplicationContext context = new ApplicationContext();
-            ServiceOrgs svc = new ServiceOrgs(context);
+            OrganizationService svc = new OrganizationService(context);
             Assert.IsInstanceOfType(svc.GetContext(), typeof(ApplicationContext));
         }
 
@@ -114,7 +114,7 @@ namespace WareHouseDataTest.Services
         public void GetContext_ReturnsSameInstance()
         {
             ApplicationContext context = new ApplicationContext();
-            ServiceOrgs svc = new ServiceOrgs(context);
+            OrganizationService svc = new OrganizationService(context);
             Assert.AreSame(context, svc.GetContext());
         }
     }

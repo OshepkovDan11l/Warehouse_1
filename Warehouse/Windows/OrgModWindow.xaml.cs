@@ -8,9 +8,9 @@ namespace Warehouse.Views
     {
         private int _mode;
         private Organization? _org;
-        private ServiceOrgs _service;
+        private OrganizationService _service;
 
-        public OrgModWindow(string title, string name, int mode, ServiceOrgs service)
+        public OrgModWindow(string title, string name, int mode, OrganizationService service)
         {
             InitializeComponent();
             Title = title;
@@ -19,7 +19,7 @@ namespace Warehouse.Views
             _service = service;
         }
 
-        public OrgModWindow(string title, string name, int mode, Organization org, ServiceOrgs service)
+        public OrgModWindow(string title, string name, int mode, Organization org, OrganizationService service)
         {
             InitializeComponent();
             Title = title;

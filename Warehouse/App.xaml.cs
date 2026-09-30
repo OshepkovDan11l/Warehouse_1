@@ -13,12 +13,12 @@ namespace Warehouse
     {
         private ApplicationContext _context;
 
-        public ServiceOrgs svcOrgs { get; set; }
+        public OrganizationService svcOrgs { get; set; }
 
         public App()
         {
             _context = new ApplicationContext();
-            svcOrgs = new ServiceOrgs(_context);
+            svcOrgs = new OrganizationService(_context);
 
             OrgsView orgsView = new OrgsView(svcOrgs);
             orgsView.Show();

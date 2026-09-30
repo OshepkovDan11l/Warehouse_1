@@ -106,5 +106,10 @@ namespace Warehouse.Views
                 DgItems.ItemsSource = _current.Items;
             }
         }
+
+        private void DgItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

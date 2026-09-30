@@ -10,10 +10,10 @@ namespace Warehouse.Views
 {
     public partial class OrgsView : Window
     {
-        private ServiceOrgs _service;
+        private OrganizationService _service;
         private Organization? _org { get; set; }
 
-        public OrgsView(ServiceOrgs svcOrgs)
+        public OrgsView(OrganizationService svcOrgs)
         {
             InitializeComponent();
             _service = svcOrgs;

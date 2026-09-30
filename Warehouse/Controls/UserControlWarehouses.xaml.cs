@@ -267,5 +267,10 @@ namespace Warehouse.Controls
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void DgProducts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
